@@ -49,7 +49,7 @@ export default function HowWeWork() {
         <p className="text-sm uppercase tracking-wide text-gray-500 font-medium">
           How We Work
         </p>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mt-1">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#484848] mt-1">
           End-to-End Assistance
         </h2>
         <div className="w-16 h-1 bg-pink-500 mx-auto mt-3 rounded-full"></div>

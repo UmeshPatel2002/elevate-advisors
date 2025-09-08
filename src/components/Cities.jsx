@@ -1,35 +1,40 @@
 import React from "react";
+import gnoida from "./../assets/noida.jpg"
+import noida from "./../assets/gnoida.jpg"
+import delhi from "./../assets/delhi.jpg"
+import gurugram from "./../assets/gurugram.jpg"
+
 
 const cities = [
   {
     name: "Noida",
     subtitle: "Properties",
-    img: "https://source.unsplash.com/600x400/?city,night",
+    img: noida,
   },
   {
     name: "Gurugram",
     subtitle: "Properties",
-    img: "https://source.unsplash.com/600x400/?gurgaon,buildings",
+    img: gurugram,
   },
   {
     name: "Greater Noida",
     subtitle: "Properties",
-    img: "https://source.unsplash.com/600x400/?city,skyline",
+    img: gnoida,
   },
   {
     name: "Delhi NCR",
     subtitle: "Properties",
-    img: "https://source.unsplash.com/600x400/?delhi,india",
+    img: delhi,
   },
 ];
 
 export default function Cities() {
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-12 bg-[#fff]">
-      <p className="mt-2 text-sm font-medium text-center text-gray-500">
+      <p className="mt-2 font-medium text-center text-gray-500">
         Find the perfect property across top cities.
       </p>
-      <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800">
+      <h2 className="text-2xl md:text-3xl font-bold text-center text-[#484848]">
         Explore Our Prime Locations
       </h2>
       <div className="w-16 h-1 bg-pink-500 mx-auto mt-3 rounded-full"></div>
