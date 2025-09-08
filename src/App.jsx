@@ -1,25 +1,30 @@
 import React from "react";
-import Header from "./components/Header.jsx"
-import Hero from "./components/Hero.jsx"
-import Services from "./components/Services.jsx"
-import Developers from "./components/Developers.jsx"
-import Testimonials from "./components/Testimonials.jsx"
-import ContactForm from "./components/ContactForm.jsx"
-import Footer from "./components/Footer.jsx"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Properties from "./pages/Properties";
+import Blogs from "./pages/Blogs";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
-export default function App(){
+export default function App() {
   return (
-    <div className="min-h-screen text-gray-800 bg-white">
-      <Header />
-      <main className="pt-20">
-        <Hero />
-        <Services />
-        <Developers />
-        <Testimonials />
-        <ContactForm />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+
+        <div className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/properties" element={<Properties />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer/>
+      </div>
+    </Router>
   );
 }
-

@@ -14,11 +14,7 @@ const devs = [
 
 export default function Developers() {
   return (
-    <section
-  id="developers"
-  className="bg-gray-50 py-16"
->
-
+    <section id="developers" className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-5">
         {/* Heading */}
         <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-12 tracking-tight">
@@ -41,11 +37,12 @@ export default function Developers() {
 
               {/* Overlay with gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end justify-center p-4">
-                <h3 className="text-lg sm:text-xl font-semibold text-blue-400 drop-shadow-md">
-  {d.name}
-</h3>
-
-
+                {/* <h3 className="text-lg sm:text-xl font-semibold text-blue-400 drop-shadow-md">
+                  {d.name}
+                </h3> */}
+                <h3 className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-transparent drop-shadow-md">
+                  {d.name}
+                </h3>
               </div>
             </div>
           ))}
