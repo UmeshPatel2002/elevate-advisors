@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import img1 from "./../assets/bg1.jpg"
-import img2 from "./../assets/bg2.jpg"
+import PropertyTypeDropdown from "../components/PropertyTypeDropdown";
+import img1 from "./../assets/bg1.jpg";
+import img2 from "./../assets/bg2.jpg";
 import {
   Home,
   MapPin,
@@ -66,21 +67,10 @@ export default function PropertyPage() {
         <h3 className="text-xl font-semibold mb-4 text-[#484848]">Filters</h3>
 
         {/* Property Type */}
-        <div className="mb-6">
-          <label className="block mb-2 font-medium text-[#484848]">
-            Property Type
-          </label>
-          <select
-            className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-gray-400 outline-none"
-            value={propertyType}
-            onChange={(e) => setPropertyType(e.target.value)}
-          >
-            <option value="All">All</option>
-            <option value="Villa">Villa</option>
-            <option value="Apartment">Apartment</option>
-            <option value="Plot">Plot</option>
-          </select>
-        </div>
+        <PropertyTypeDropdown
+          propertyType={propertyType}
+          setPropertyType={setPropertyType}
+        />
 
         {/* Price Range */}
         <div>
