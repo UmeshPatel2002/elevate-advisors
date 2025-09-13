@@ -3,7 +3,7 @@ import { Phone } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div className="bg-gradient-to-br from-gray-100 to-gray-200 py-16 relative overflow-hidden mt-20">
+    <div className="bg-gradient-to-br from-gray-100 to-gray-200 py-16 relative overflow-hidden">
       {/* Decorative background circles */}
       <div className="absolute top-10 left-10 w-40 h-40 bg-gray-300 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-10 right-10 w-52 h-52 bg-gray-400 rounded-full blur-3xl opacity-20"></div>

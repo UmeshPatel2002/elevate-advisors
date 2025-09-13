@@ -138,7 +138,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="#"
+                  to="/blogs"
                   className="text-gray-300 hover:text-[#c89c52] transition-colors duration-300 block"
                 >
                   Blogs

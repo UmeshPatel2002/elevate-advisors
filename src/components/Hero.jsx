@@ -11,7 +11,7 @@ import bg3 from "./../assets/bg3.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[110vh] md:min-h-[130vh] text-center overflow-hidden md:pt-0 pt-10">
+    <section className="relative w-full min-h-[110vh] md:min-h-[130vh] text-center overflow-hidden md:pt-0">
       {/* Background Carousel */}
       <div className="relative w-full h-[80vh] sm:h-[70vh] md:h-screen z-0">
         <Swiper
