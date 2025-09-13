@@ -65,30 +65,38 @@ export default function PropertyDetails() {
   return (
     <div className="max-w-6xl mx-auto mt-28 bg-white rounded-2xl shadow-md overflow-hidden">
       {/* Image Gallery */}
-      <div className="p-6">
+<div className="p-6">
+  <img
+    src={selectedImage}
+    alt="Main Property"
+    className="w-full h-56 sm:h-72 md:h-96 lg:h-[500px] object-cover rounded-lg"
+  />
+
+  <div
+    className="
+      mt-4 flex gap-3 overflow-x-auto md:overflow-x-hidden flex-nowrap
+      scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100
+      p-1
+    "
+  >
+    {property.images.map((img, index) => (
+      <div
+        key={index}
+        className={`flex-shrink-0 p-1 rounded-md ${
+          selectedImage === img ? "ring-4 ring-blue-400" : ""
+        }`}
+      >
         <img
-          src={selectedImage}
-          alt="Main Property"
-          className="w-full h-[500px] object-cover rounded-lg"
+          src={img}
+          alt={`Property ${index}`}
+          className="w-32 h-20 sm:w-36 sm:h-24 object-cover rounded-md cursor-pointer transition-all duration-300 hover:scale-105"
+          onClick={() => setSelectedImage(img)}
         />
-        <div className="p-2 flex gap-4 mt-4 overflow-x-auto pl-2 flex-nowrap md:flex-wrap">
-          {property.images.map((img, index) => (
-            <div
-              key={index}
-              className={`p-1 rounded-md ${
-                selectedImage === img ? "ring-4 ring-blue-400" : ""
-              }`}
-            >
-              <img
-                src={img}
-                alt={`Property ${index}`}
-                className="w-36 h-24 object-cover rounded-md cursor-pointer transition-all duration-300 hover:scale-105"
-                onClick={() => setSelectedImage(img)}
-              />
-            </div>
-          ))}
-        </div>
       </div>
+    ))}
+  </div>
+</div>
+
 
       {/* Property Details */}
       <div className="p-6 space-y-4">

@@ -92,13 +92,7 @@ export default function Footer() {
           <div className="text-left">
             <h3 className="font-semibold mb-4 text-white">Contact us </h3>
             <div className="space-y-4">
-              <Link
-                to="mailto:info@elevateexpert.com"
-                className="flex items-start gap-2 text-gray-300 hover:text-[#c89c52] transition-colors duration-300"
-              >
-                <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>info@elevateexpert.com</span>
-              </Link>
+              
               <div className="flex items-start gap-2 text-gray-300">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <span>
@@ -107,6 +101,13 @@ export default function Footer() {
                   Sector 136, Noida, UP 201305
                 </span>
               </div>
+              <Link
+                to="mailto:info@elevateexpert.com"
+                className="flex items-start gap-2 text-gray-300 hover:text-[#c89c52] transition-colors duration-300"
+              >
+                <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span>info@elevateexpert.com</span>
+              </Link>
               <Link
                 to="tel:919880544456"
                 className="flex items-center gap-2 text-gray-300 hover:text-[#c89c52] transition-colors duration-300"

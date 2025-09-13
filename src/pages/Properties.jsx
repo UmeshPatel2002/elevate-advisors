@@ -63,7 +63,7 @@ export default function PropertyPage() {
   return (
     <div className="flex flex-col md:flex-row max-w-7xl mx-auto  px-5 gap-6 mt-28">
       {/* Filter Sidebar */}
-      <aside className="w-full md:w-1/4 bg-white rounded-2xl shadow-md p-5 h-fit sticky top-28">
+      <aside className="w-full md:w-1/4 bg-white rounded-2xl shadow-md p-5 h-fit md:sticky top-28">
         <h3 className="text-xl font-semibold mb-4 text-[#484848]">Filters</h3>
 
         {/* Property Type */}
