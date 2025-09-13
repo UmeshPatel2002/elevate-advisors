@@ -8,7 +8,7 @@ import ourStory from "./../assets/our story.jpg"
 export default function AboutUs() {
   return (
     <div className="bg-gray-50">
-      <section className="relative w-full h-[50vh] md:h-[65vh] overflow-hidden">
+      <section className="relative w-full h-[50vh] md:h-[65vh] overflow-hidden bg-black/10">
         <img
           src={aboutus}
           alt="About Elevate Estate Advisors"

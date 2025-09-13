@@ -122,7 +122,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="#"
+                  to="/privacypolicy"
                   className="text-gray-300 hover:text-[#c89c52] transition-colors duration-300 block"
                 >
                   Privacy Policy

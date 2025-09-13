@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import PropertyDetail from "./pages/PropertyDetail"
+import PrivacyPolicies from "./pages/PrivacyPolicies"
 export default function App() {
   return (
     <Router>
@@ -22,6 +23,8 @@ export default function App() {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacypolicy" element={<PrivacyPolicies/>} />
+
           </Routes>
         </div>
         <Footer/>
