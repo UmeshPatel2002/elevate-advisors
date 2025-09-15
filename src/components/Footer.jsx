@@ -106,7 +106,7 @@ export default function Footer() {
                 className="flex items-start gap-2 text-gray-300 hover:text-[#c89c52] transition-colors duration-300"
               >
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>info@elevateexpert.com</span>
+                <span>info@elevateestateadvisors.com</span>
               </Link>
               <Link
                 to="tel:919880544456"
