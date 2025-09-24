@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const PropertyTypeDropdown = ({ propertyType, setPropertyType }) => {
   const [open, setOpen] = useState(false);
-  const options = ["All", "Villa", "Apartment", "Plot"];
+  const options = ["All", "Apartment", "Commercial","Office Space", "Residential"];
 
   return (
     <div className="mb-6 relative">

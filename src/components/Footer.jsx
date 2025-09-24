@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {/* Company Section */}
           <div className="text-left">
-            <h3 className="font-semibold mb-4 text-white">Elevate Experts</h3>
+            <h3 className="font-semibold mb-4 text-white">Elevate Estate</h3>
             <div className="space-y-3">
               <p className="text-gray-300 leading-relaxed font-medium text-sm">
                 At Elevate, we don't just close deals—we foster long-term
@@ -102,7 +102,7 @@ export default function Footer() {
                 </span>
               </div>
               <Link
-                to="mailto:info@elevateexpert.com"
+                to="mailto:info@elevateestateadvisors.com"
                 className="flex items-start gap-2 text-gray-300 hover:text-[#c89c52] transition-colors duration-300"
               >
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />

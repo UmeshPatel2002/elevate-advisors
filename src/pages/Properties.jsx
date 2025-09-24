@@ -27,8 +27,8 @@ const sampleProperties = [
     year_built: 2018,
     description: "Luxury 3BHK villa with garden and parking.",
     listing_status: "For Sale",
-    property_type: "Villa",
-    image: img1, // Replace with real property image
+    property_type: "Commercial",
+    image: img1,
   },
   {
     property_id: 2,
@@ -46,6 +46,38 @@ const sampleProperties = [
     property_type: "Apartment",
     image: img2,
   },
+  {
+    property_id: 3,
+    address: "123 Palm Street",
+    city: "Bangalore",
+    state: "Karnataka",
+    country: "India",
+    list_price: 5500000,
+    min_price: 5000000,
+    max_price: 6000000,
+    square_footage: 2200,
+    year_built: 2018,
+    description: "Luxury 3BHK villa with garden and parking.",
+    listing_status: "For Sale",
+    property_type: "Residential",
+    image: img1,
+  },
+  {
+    property_id: 4,
+    address: "123 Palm Street",
+    city: "Bangalore",
+    state: "Karnataka",
+    country: "India",
+    list_price: 5500000,
+    min_price: 5000000,
+    max_price: 6000000,
+    square_footage: 2200,
+    year_built: 2018,
+    description: "Luxury 3BHK villa with garden and parking.",
+    listing_status: "For Sale",
+    property_type: "Office Space",
+    image: img1,
+  },
 ];
 
 export default function PropertyPage() {
@@ -61,7 +93,7 @@ export default function PropertyPage() {
   });
 
   return (
-    <div className="flex flex-col md:flex-row max-w-7xl mx-auto  px-5 gap-6 mt-28">
+    <div className="flex flex-col md:flex-row max-w-7xl mx-auto px-5 gap-6 mt-32">
       {/* Filter Sidebar */}
       <aside className="w-full md:w-1/4 bg-white rounded-2xl shadow-md p-5 h-fit md:sticky top-28">
         <h3 className="text-xl font-semibold mb-4 text-[#484848]">Filters</h3>
@@ -73,7 +105,7 @@ export default function PropertyPage() {
         />
 
         {/* Price Range */}
-        <div>
+        <div className="mt-4">
           <label className="block mb-2 font-medium text-[#484848]">
             Max Price: ₹{priceRange.toLocaleString()}
           </label>
@@ -84,7 +116,7 @@ export default function PropertyPage() {
             step="500000"
             value={priceRange}
             onChange={(e) => setPriceRange(Number(e.target.value))}
-            className="w-full bg-[#24324a]"
+            className="w-full accent-[#24324a]"
           />
         </div>
       </aside>
@@ -96,29 +128,26 @@ export default function PropertyPage() {
             <Link
               to={`/property/${property.property_id}`}
               key={property.property_id}
-              className="block"
+              className="group block rounded-2xl overflow-hidden transition-shadow hover:shadow-lg"
             >
-              <div
-                key={property.property_id}
-                className="flex flex-col md:flex-row bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-all"
-              >
+              <div className="flex flex-col md:flex-row bg-white">
                 {/* Image */}
-                <div className="md:w-1/3">
+                <div className="md:w-1/3 overflow-hidden">
                   <img
                     src={property.image}
                     alt={property.address}
-                    className="w-full h-64 md:h-full object-cover"
+                    className="w-full h-64 md:h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
 
                 {/* Details */}
                 <div className="flex-1 p-6 space-y-3">
                   <h3 className="text-2xl font-semibold text-[#484848] flex items-center gap-2">
-                    <Home className="w-6 h-6 text-gray-500" />{" "}
+                    <Home className="w-6 h-6 text-gray-500" />
                     {property.property_type}
                   </h3>
                   <p className="text-gray-600 flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-gray-500" />{" "}
+                    <MapPin className="w-5 h-5 text-gray-500" />
                     {property.address}, {property.city}, {property.state}
                   </p>
 
@@ -129,22 +158,18 @@ export default function PropertyPage() {
 
                   <div className="flex flex-wrap gap-4 text-gray-600">
                     <span className="flex items-center gap-1">
-                      <Ruler className="w-4 h-4" /> {property.square_footage}{" "}
-                      sqft
+                      <Ruler className="w-4 h-4" /> {property.square_footage} sqft
                     </span>
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" /> Built{" "}
-                      {property.year_built}
+                      <Calendar className="w-4 h-4" /> Built {property.year_built}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Building2 className="w-4 h-4" />{" "}
+                      <Building2 className="w-4 h-4" />
                       {property.listing_status}
                     </span>
                   </div>
 
-                  <p className="text-sm text-gray-500">
-                    {property.description}
-                  </p>
+                  <p className="text-sm text-gray-500">{property.description}</p>
                 </div>
               </div>
             </Link>

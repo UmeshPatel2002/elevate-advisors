@@ -14,38 +14,59 @@ const devs = [
 
 export default function Developers() {
   return (
-    <section id="developers" className="bg-gray-50 py-16">
-      <div className="max-w-7xl mx-auto px-5">
-        {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-12 tracking-tight">
+    <section className="py-12 px-4 sm:px-6 lg:px-12 bg-[#fff]">
+      <div className="max-w-7xl mx-auto">
+        <p className="mt-2 font-medium text-center text-gray-500">
+          Building trust with world-class developers.
+        </p>
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-[#484848]">
           Trusted Developers
         </h2>
+        <div className="w-16 h-1 bg-pink-500 mx-auto mt-3 rounded-full"></div>
 
-        {/* Responsive layout */}
-        <div className="flex overflow-x-auto gap-6 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-8 no-scrollbar">
-          {devs.map((d, i) => (
-            <div
-              key={d.name}
-              className="relative min-w-[220px] sm:min-w-0 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105"
-            >
-              {/* Full background image */}
-              <img
-                src={d.img}
-                alt={d.name}
-                className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 hover:scale-110"
-              />
-
-              {/* Overlay with gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end justify-center p-4">
-                {/* <h3 className="text-lg sm:text-xl font-semibold text-blue-400 drop-shadow-md">
-                  {d.name}
-                </h3> */}
-                <h3 className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-transparent drop-shadow-md">
-                  {d.name}
-                </h3>
+        {/* Cards Section */}
+        <div className="mt-8">
+          {/* Large Screen: 4 in a row */}
+          <div className="hidden lg:flex justify-center gap-6 flex-wrap">
+            {devs.map((dev, index) => (
+              <div
+                key={index}
+                className="relative rounded-xl overflow-hidden shadow-lg group w-64"
+              >
+                <img
+                  src={dev.img}
+                  alt={dev.name}
+                  className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center p-4">
+                  <h3 className="text-lg font-bold bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-transparent drop-shadow-md">
+                    {dev.name}
+                  </h3>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Mobile & Medium: Horizontal Scroll */}
+          <div className="flex lg:hidden gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+            {devs.map((dev, index) => (
+              <div
+                key={index}
+                className="relative rounded-xl overflow-hidden shadow-lg group min-w-[250px] snap-center"
+              >
+                <img
+                  src={dev.img}
+                  alt={dev.name}
+                  className="w-full h-48 md:h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center p-4">
+                  <h3 className="text-lg font-bold bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-transparent drop-shadow-md">
+                    {dev.name}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -17,10 +17,10 @@ export default function Navbar() {
           <img
             src={logo}
             alt="ElevateExperts Logo"
-            className="h-16 w-auto rounded-md"
+            className="h-20 w-auto rounded-md"
           />
           <span className="text-xl font-bold tracking-wide text-[#484848]">
-            ElevateExperts
+            ELEVATE ESTATE
           </span>
         </NavLink>
         {/* Desktop Menu */}

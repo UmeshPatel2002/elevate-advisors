@@ -7,7 +7,7 @@ import ourStory from "./../assets/our story.jpg"
 
 export default function AboutUs() {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 mt-20">
       <section className="relative w-full h-[50vh] md:h-[65vh] overflow-hidden bg-black/10">
         <img
           src={aboutus}
@@ -39,7 +39,7 @@ export default function AboutUs() {
 
             <div className="text-center md:text-left text-justify leading-relaxed">
               <h3 className="text-xl font-bold text-gray-800">
-                Vishal Khirbat
+                Mr. Vishal Khirbat
               </h3>
               <p className="italic text-gray-500 mb-4">Co-Founder & Director</p>
               <p className="text-gray-600 mb-2">
@@ -74,7 +74,7 @@ export default function AboutUs() {
             />
 
             <div className="text-center md:text-left text-justify">
-              <h3 className="text-xl font-bold text-gray-800">Sushil Tiwari</h3>
+              <h3 className="text-xl font-bold text-gray-800">Mr. Sushil Tiwari</h3>
               <p className="italic text-gray-500 mb-4">Co-Founder & Director</p>
               <p className="text-gray-600 mb-2">
                 Sushil Tiwari is a seasoned professional with over 16 years of

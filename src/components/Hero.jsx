@@ -87,7 +87,7 @@ export default function Hero() {
                 className="mt-3 text-sm sm:text-base md:text-lg text-[#484848] font-medium 
                    transition-colors duration-300 group-hover:text-[#69bb53]"
               >
-                Modern Villa
+               Residential
               </p>
             </div>
 
@@ -104,7 +104,7 @@ export default function Hero() {
                 className="mt-3 text-sm sm:text-base md:text-lg text-[#484848] font-medium 
                    transition-colors duration-300 group-hover:text-[#69bb53]"
               >
-                Family House
+                Commercial
               </p>
             </div>
 
